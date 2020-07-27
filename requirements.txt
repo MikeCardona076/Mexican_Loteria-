@@ -1,0 +1,4 @@
+pyttsx3==2.90
+
+''' If there is any problem run this'''
+# sudo apt-get update && sudo apt-get install espeak
