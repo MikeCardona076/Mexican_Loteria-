@@ -18,13 +18,13 @@ def Jugar():
     for i in range(54):
         time.sleep(1)
         engine = pyttsx3.init()
-        response = random.choice(cartas_loteria)
-        if response not in cartas_pasadas:
-            cartas_pasadas.append(response)
+        carta_loteria = random.choice(cartas_loteria)
+        if carta_loteria not in cartas_pasadas:
+            cartas_pasadas.append(carta_loteria)
             voices = engine.getProperty('voices')
             engine.setProperty('voice', voices[0].id)
-            engine.say(response)
-            print(response)
+            engine.say(carta_loteria)
+            print(carta_loteria)
         else:
             Jugar()
         engine.runAndWait()
